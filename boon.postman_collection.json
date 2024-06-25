@@ -1,0 +1,156 @@
+{
+	"info": {
+		"_postman_id": "b44799e4-117f-4a5d-81c6-560cef7192ff",
+		"name": "boon",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34471564"
+	},
+	"item": [
+		{
+			"name": "Create Patient",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Mjk0NzM3LCJpYXQiOjE3MTkyOTQ0MzcsImp0aSI6IjQ5NjRhMWFiMTc3NDQyYjZiMDQzZjY3MTdlN2FmOWQ3IiwidXNlcl9pZCI6MX0.tUPVfyU9hHyR6criAxQyTaENPpNyW1mrFmQ2Y65Cf-w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"rv\",\n    \"age\":52,\n    \"medical_history\":\"Not any\",\n    \"Doctor\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/patient_create/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"patient_create",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\":\"rv@gmail.com\",\n    \"password\":1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/api/token/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "patient_update",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Mjk0NzM3LCJpYXQiOjE3MTkyOTQ0MzcsImp0aSI6IjQ5NjRhMWFiMTc3NDQyYjZiMDQzZjY3MTdlN2FmOWQ3IiwidXNlcl9pZCI6MX0.tUPVfyU9hHyR6criAxQyTaENPpNyW1mrFmQ2Y65Cf-w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 1,\n    \"name\": \"rv NIkam\",\n    \"age\": 52,\n    \"medical_history\": \"Not any\",\n    \"Doctor\": 1\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8000/edit_patient_details/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"edit_patient_details",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all patient details",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzE5Mjk1MjMzLCJpYXQiOjE3MTkyOTQ5MzMsImp0aSI6IjhhZGMyZDExMmFkYzQ0MmJhYTkyMTI2NmQwMzQwM2QwIiwidXNlcl9pZCI6MX0.GnzhNHilEgcttUlfJQXjUWPXRGBx-tO6GLwLMqM4uuY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:8000/patient_api/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"patient_api",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
